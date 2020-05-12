@@ -30,10 +30,17 @@ class PlaySoundsViewController: UIViewController {
         case slow, fast, chipmunk, vader, echo, reverb
     }
     
+    /*
+       Called once the MainView of a PlaySoundsViewController has been loaded.
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
     }
+    
+    /*
+     called when the view is about to appear
+     */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
@@ -57,11 +64,12 @@ class PlaySoundsViewController: UIViewController {
             case .reverb:
                 playSound(reverb: true)
             }
-
         configureUI(.playing)
-        
     }
 
+    /**
+     Action to be done when the Stop Button is pressed
+     */
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
