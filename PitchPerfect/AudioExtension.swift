@@ -1,7 +1,7 @@
 //
 //  AudioExtension.swift
 //  PitchPerfect
-//
+//  Code provided by Udacity
 //  Copyright Â© 2016 Udacity. All rights reserved.
 //
 
