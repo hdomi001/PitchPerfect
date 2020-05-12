@@ -26,7 +26,8 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
-    enum ButtonType: Int {
+    //Enums corresponding to the button tags
+    enum playSoundButtonTags: Int {
         case slow, fast, chipmunk, vader, echo, reverb
     }
     
@@ -50,7 +51,7 @@ class PlaySoundsViewController: UIViewController {
      Plays the appropriate effect sound for the given button pressed
      */
     @IBAction func playSoundForButton(_ sender: UIButton) {
-        switch(ButtonType(rawValue: sender.tag)!) {
+        switch(playSoundButtonTags(rawValue: sender.tag)!) {
             case .slow:
                 playSound(rate: 0.5)
             case .fast:
@@ -73,5 +74,4 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
-
 }

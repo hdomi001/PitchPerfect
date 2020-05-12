@@ -53,8 +53,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="9bI-tT-nXe"/>
                     <connections>
+                        <outlet property="audioRecordingLabel" destination="O7Z-q5-B2b" id="hW3-OE-rF9"/>
                         <outlet property="recordButton" destination="o5W-os-orF" id="6wr-CF-FgL"/>
-                        <outlet property="recordingLabel" destination="O7Z-q5-B2b" id="oEo-La-hdt"/>
                         <outlet property="stopRecordingButton" destination="zfK-Fw-uAG" id="Fay-bw-yKx"/>
                         <segue destination="eRH-am-qli" kind="show" identifier="stopRecording" id="nwb-uh-w77"/>
                     </connections>
