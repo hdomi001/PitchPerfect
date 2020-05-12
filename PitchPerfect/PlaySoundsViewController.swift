@@ -11,6 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    // MARK: PlaySoundsViewController IBOutlets
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
@@ -26,7 +27,7 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: Timer!
     
     enum ButtonType: Int {
-        case slow = 0, fast, chipmunk, vader, echo, reverb
+        case slow, fast, chipmunk, vader, echo, reverb
     }
     
     override func viewDidLoad() {
@@ -38,21 +39,24 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.notPlaying)
     }
     
+    /**
+     Plays the appropriate effect sound for the given button pressed
+     */
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
-        case .slow:
-            playSound(rate: 0.5)
-        case .fast:
-            playSound(rate: 1.5)
-        case .chipmunk:
-            playSound(pitch: 1000)
-        case .vader:
-            playSound(pitch: -1000)
-        case .echo:
-            playSound(echo: true)
-        case .reverb:
-            playSound(reverb: true)
-        }
+            case .slow:
+                playSound(rate: 0.5)
+            case .fast:
+                playSound(rate: 1.5)
+            case .chipmunk:
+                playSound(pitch: 1000)
+            case .vader:
+                playSound(pitch: -1000)
+            case .echo:
+                playSound(echo: true)
+            case .reverb:
+                playSound(reverb: true)
+            }
 
         configureUI(.playing)
         
