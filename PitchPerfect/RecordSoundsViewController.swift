@@ -27,12 +27,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-          print("viewWillAppear called")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("viewDidAppear called")
     }
 
 
@@ -76,7 +74,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "stopReecording" {
+        if segue.identifier == "stopRecording" {
             let playSoundsVCS = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
             playSoundsVCS.recordedAudioURL = recordedAudioURL
