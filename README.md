@@ -11,7 +11,7 @@ The application offers below sound modulations
 
 # Screenshots
 
-| Tables        | Are           | 
+|         |            | 
 | ------------- |:-------------:|
 | ![](images/home_tap_to_record.PNG)      | ![](images/home_recording_inprogress.PNG) |
 | ![](images/modulation_choose.PNG)     | ![](images/modulation_playing.PNG)       |
