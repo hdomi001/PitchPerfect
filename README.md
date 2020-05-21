@@ -8,3 +8,8 @@ The application offers below sound modulations
 * Darth Vader
 * Super Slow
 * Super Fast.
+
+# Screenshots
+|    |            |
+|----------|:-------------:|
+| ![](images/home_tap_to_record.PNG)|  ![](images/modulation_choose.PNG) | 
